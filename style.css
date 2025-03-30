@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Lexend:wght@100..900&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&family=Zen+Dots&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1C304F;
+    --secondary: #98BBF5;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 20px;
+    background-color: #192b47;
+    border-radius: 20px;
+    gap: 24px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-item label {
+    width: fit-content;
+    padding: 2px 6px;
+    border-radius: 99px;
+    position: absolute;
+    padding: 8px 16px;
+    transition: .2s all ease-in-out;
+}
+
+.form-item input {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--primary);
+    border: 1px solid var(--secondary);
+    border-radius: 99px;
+    padding: 12px;
+    outline: none;
+    color: var(--secondary);
+}
+
+.form-item:has(input:focus) label {
+    margin-top: -12px;
+    font-size: 12px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 2px 6px;
+    margin-left: 12px;
+}
+
+.form-item:not(:has(input:placeholder-shown)) label {
+    margin-top: -12px;
+    font-size: 12px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 2px 6px;
+    margin-left: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 6px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    border-radius: 99px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.login a {
+    color: #c1d6f9;
+}
+
+.info-box-login {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.logo-login {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
