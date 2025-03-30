@@ -17,6 +17,8 @@ body {
     height: 100%;
     font-family: "Poppins", sans-serif;
     font-style: normal;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .container {
@@ -72,7 +74,7 @@ body {
     font-size: 12px;
     background-color: var(--secondary);
     color: var(--primary);
-    padding: 2px 6px;
+    padding: 2px 14px;
     margin-left: 12px;
 }
 
