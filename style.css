@@ -19,6 +19,7 @@ body {
     font-style: normal;
     user-select: none;
     -webkit-user-drag: none;
+    background-color: var(--primary);
 }
 
 .container {
@@ -117,4 +118,54 @@ button {
     top: 110px;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 22px;
+    color: var(--secondary);
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.container {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.loader-bar-box {
+    width: 80%;
+    background-color: #495972;
+    height: 8px;
+    border-radius: 99px;
+}
+
+.loader-bar {
+    width: 100%;
+    animation: floader 1s;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    background-color: #16263f;
+    height: 100%;
+    border-radius: 99px;
+}
+
+@keyframes floader {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
