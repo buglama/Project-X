@@ -173,6 +173,8 @@ button {
 .home {
     width: 100%;
     height: 100%;
+    padding-bottom: 75px;
+    overflow-y: scroll;
 }
 
 header {
@@ -461,4 +463,48 @@ header {
 
 .frame-item-3 a {
     color: var(--primary);
+}
+
+.main-nav {
+    width: 90%;
+    height: auto;
+    position: fixed;
+    bottom: 0px;
+    background-color: var(--secondary);
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    border: 2px solid var(--primary);
+    border-radius: 12px 12px 0 0;
+    border-bottom: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    width: 25%;
+    padding-top: 12px;
+}
+
+.nav-item:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.nav-item:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+.nav-icon {
+    height: 32px;
+    aspect-ratio: 1/1;
+    background-color: var(--primary);
+    border-radius: 4px;
+}
+
+.nav-item {
+    color: var(--primary);
+    text-decoration: none;
 }

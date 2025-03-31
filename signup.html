@@ -27,19 +27,23 @@
                     fill="#98bbf5"></path>
             </svg>
         </div>
-        <form action="home.html" id="loginForm" class="login">
-            <p id="loginMessage"></p>
-            <h2>Login</h2>
+        <form id="signupForm" class="login">
+            <p id="signupMessage"></p>
+            <h2>Sign Up</h2>
             <div class="form-item">
-                <label for="loginEmail">E-mail</label>
-                <input type="email" name="loginEmail" id="loginEmail" placeholder="‎ " required>
+                <label for="signupEmail">E-mail</label>
+                <input type="email" name="signupEmail" id="signupEmail" placeholder="‎ " required>
             </div>
             <div class="form-item">
-                <label for="loginPassword">Password</label>
-                <input type="password" name="loginPassword" id="loginPassword" placeholder="‎ " required>
+                <label for="signupPassword">Password</label>
+                <input type="password" name="signupPassword" id="signupPassword" placeholder="‎ " required>
             </div>
-            <button type="submit">Login</button>
-            <p>Don't have an account? <a href="Signup.html">Create one.</a></p>
+            <div class="form-item">
+                <label for="signupPassword2">Repeat password</label>
+                <input type="password" name="signupPassword2" id="signupPassword2" placeholder="‎ " required>
+            </div>
+            <button type="submit">Sign up</button>
+            <p>Already have an account? <a href="index.html">Log in.</a></p>
         </form>
         <div class="info-box info-box-login">&copy; All rights reserved | TheFeerid</div>
     </div>
@@ -54,16 +58,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
-
-        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
-
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                // Əgər istifadəçi login olubsa, əsas səhifəyə yönləndir
-                window.location.href = "home.html";
-            }
-        });
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyCofu7NaFIbvkXAYvEprc9KPXF8Q-_sUOc",
@@ -78,21 +73,30 @@
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        document.getElementById("loginForm").addEventListener("submit", (e) => {
+        document.getElementById("signupForm").addEventListener("submit", (e) => {
             e.preventDefault();
-            const email = document.getElementById("loginEmail").value;
-            const password = document.getElementById("loginPassword").value;
-            const loginMessage = document.getElementById("loginMessage");
+            const email = document.getElementById("signupEmail").value;
+            const password = document.getElementById("signupPassword").value;
+            const password2 = document.getElementById("signupPassword2").value;
+            const signupMessage = document.getElementById("signupMessage");
 
-            signInWithEmailAndPassword(auth, email, password)
+            if (password !== password2) {
+                signupMessage.textContent = "Passwords do not match!";
+                signupMessage.style.color = "red";
+                return;
+            }
+
+            createUserWithEmailAndPassword(auth, email, password)
                 .then(() => {
-                    loginMessage.textContent = "Login successful! Redirecting...";
+                    signupMessage.textContent = "Account created successfully! Redirecting...";
+                    signupMessage.style.color = "green";
                     setTimeout(() => {
-                        window.location.href = "home.html";
-                    }, 2000);
+                        window.location.href = "home.html"; // Əsas səhifəyə yönləndir
+                    }, 2000); // 2 saniyə sonra yönləndirsin ki, user mesajı görə bilsin
                 })
                 .catch(error => {
-                    loginMessage.textContent = "Login failed: " + error.message;
+                    signupMessage.textContent = "Signup failed: " + error.message;
+                    signupMessage.style.color = "red";
                 });
         });
     </script>
