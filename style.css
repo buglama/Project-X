@@ -558,7 +558,7 @@ header {
     gap: 12px;
 }
 
-.partners > h2 {
+.partners>h2 {
     margin-left: 12px;
     margin-bottom: 12px;
 }
@@ -570,7 +570,7 @@ header {
     border-radius: 12px;
     display: flex;
     align-items: center;
-    padding: 6px ;
+    padding: 6px;
     gap: 8px;
     height: 80px;
 }
@@ -606,4 +606,145 @@ header {
     font-size: 12px;
     font-weight: 400;
     color: var(--primary-light-20);
+}
+
+.profit {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 72px;
+    overflow-y: scroll;
+}
+
+.profit>h2 {
+    margin-left: 12px;
+    margin-bottom: 12px;
+}
+
+.profit-frame {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.circular-progress {
+    --size: 250px;
+    --half-size: calc(var(--size) / 2);
+    --stroke-width: 20px;
+    --radius: calc((var(--size) - var(--stroke-width)) / 2);
+    --circumference: calc(var(--radius) * pi * 2);
+    --dash: calc((var(--progress) * var(--circumference)) / 120);
+    transform: rotate(-90deg);
+    overflow: hidden;
+    margin-bottom: -100px;
+}
+
+.circular-progress circle {
+    cx: var(--half-size);
+    cy: var(--half-size);
+    r: var(--radius);
+    stroke-width: var(--stroke-width);
+    fill: none;
+    stroke-linecap: round;
+}
+
+.circular-progress circle.fg {
+    transform: rotate(-90deg);
+    transform-origin: var(--half-size) var(--half-size);
+    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    transition: stroke-dasharray 0.3s linear 0s;
+    stroke: var(--primary);
+    z-index: 2;
+}
+
+.circular-progress circle.fg2 {
+    transform: rotate(-90deg);
+    transform-origin: var(--half-size) var(--half-size);
+    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    transition: stroke-dasharray 0.3s linear 0s;
+    stroke: var(--secondary-dark-30);
+    transform: rotate(-60deg);
+    z-index: 1;
+}
+
+.balance {
+    width: 90%;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 12px;
+    color: var(--primary);
+    gap: 6px;
+}
+
+.balance-progress {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.balance-progress-absolute-item {
+    content: "86%";
+    color: var(--primary);
+    position: relative;
+    margin-top: -70px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.aim {
+    font-size: 20px;
+}
+
+.profit-info-sml-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profit-info-sml {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profit-frame-2 {
+    display: flex;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+}
+
+.profit-frame-2-item {
+    width: 46%;
+    aspect-ratio: 1/1;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profit-frame-2-item-icon {
+    width: 75%;
+    aspect-ratio: 1/1;
+    background-color: var(--primary);
+    margin-bottom: 12px;
+    border-radius: 12px;
+}
+
+.profit-frame-2-item-text-info {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.profit-frame-2-item-text {
+    font-size: 14px;
+    color: var(--primary-light-10);
 }
