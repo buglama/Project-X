@@ -748,3 +748,86 @@ header {
     font-size: 14px;
     color: var(--primary-light-10);
 }
+
+.frame-4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.frame-4-item {
+    min-width: 85%;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    scroll-snap-align: center;
+}
+
+.frame-4-item-img {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--secondary);
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+.frame-4-item-img-extra-info {
+    background-color: var(--secondary);
+    color: var(--primary);
+    width: fit-content;
+    padding: 2px 12px;
+    border-radius: 99px;
+}
+
+.frame-4-item-info-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+p.frame-4-item-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.frame-4-item-main-extra {
+    display: flex;
+    gap: 4px;
+}
+
+.frame-4-item-main-extra span {
+    opacity: .6;
+}
+
+.frame-4-item-info-extra {
+    display: flex;
+    gap: 6px;
+    opacity: .6;
+    margin-top: 6px;
+}
+
+.frame-4-item-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px 0 0;
+}
+
+.frame-4-item-box-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.frame-4-scroll-x {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    gap: 12px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 12px;
+}
