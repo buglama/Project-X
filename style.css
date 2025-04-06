@@ -774,6 +774,7 @@ header {
     aspect-ratio: 16/9;
     border-radius: 6px;
     padding: 8px;
+    box-shadow: 0px -30px 50px #00000080 inset;
 }
 
 .frame-4-item-img-extra-info {
@@ -836,4 +837,59 @@ p.frame-4-item-name {
     width: 100%;
     height: 100%;
     padding: 12px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    width: 8px;
+    margin: 0 2px;
+    background-color: var(--primary-light-20);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--secondary);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.mySlides img {
+    width: 200px;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
 }
