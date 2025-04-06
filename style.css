@@ -893,3 +893,147 @@ p.frame-4-item-name {
     aspect-ratio: 16/9;
     border-radius: 12px;
 }
+
+.frame-6 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame-6-svg {
+    width: 182.1px;
+    height: 71.16px;
+}
+
+.frame-6-svg {
+    margin-top: -35px;
+}
+
+.frame-6-svg path {
+    fill: var(--secondary);
+}
+
+.frame-6-box-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/*
+.frame-6-box-header::after {
+    content: "Shopping";
+    position: relative;
+    right: 120px;
+    margin-bottom: 23px;
+    color: var(--primary);
+}
+*/
+
+.frame-6-box {
+    width: 100%;
+    background-color: var(--secondary-dark-60);
+    margin-top: 35px;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame-6-svg-text {
+    position: absolute;
+    color: var(--primary);
+    right: 35%;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.frame-6-item-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4%;
+}
+
+.frame-6-item {
+    width: 22%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.frame-6-item-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--secondary);
+    border-radius: 12px;
+}
+
+.frame-6-item-text {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    text-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.frame-7 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frame-7-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.frame-7-item:nth-child(1),
+.frame-7-item:nth-child(2),
+.frame-7-item:nth-child(3) {
+    margin-top: unset;
+}
+
+.frame-7-item {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 4px;
+    border-radius: 12px;
+    gap: 4px;
+    margin-top: 12px;
+}
+
+.frame-7-item-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--primary);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.frame-7-item-image-span {
+    width: 25%;
+    aspect-ratio: 1/1;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    font-size: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
