@@ -773,7 +773,7 @@ header {
     color: var(--secondary);
     aspect-ratio: 16/9;
     border-radius: 6px;
-    padding: 12px;
+    padding: 8px;
 }
 
 .frame-4-item-img-extra-info {
@@ -832,61 +832,8 @@ p.frame-4-item-name {
     scroll-padding: 0 12px;
 }
 
-.frame-5 {
+.profile-box {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.frame-5-scroll-x {
-    width: 100%;
-    display: flex;
-    overflow-x: scroll;
-    gap: 12px;
-    scroll-snap-type: x mandatory;
-}
-
-.frame-5-item {
-    min-width: 100%;
-    aspect-ratio: 16/9;
-    background-color: var(--secondary);
-    color: var(--primary);
-    border-radius: 12px;
-    scroll-snap-align: center;
-}
-
-.frame-5-dots {
-    width: fit-content;
-    display: flex;
-    gap: 6px;
-}
-
-.frame-5-dot {
-    width: 6px;
-    aspect-ratio: 1/1;
-    background-color: var(--secondary);
-    opacity: .3;
-    border-radius: 99px;
-}
-
-.frame-5-dot.active {
-    opacity: 1;
-}
-
-.home-marque {
-    width: 100%;
-}
-
-.home-marque-box {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-}
-
-.marque-div {
-    min-width: 60px;
-    aspect-ratio: 16/9;
-    background-color: var(--secondary);
-    border-radius: 12px;
+    height: 100%;
+    padding: 12px;
 }
