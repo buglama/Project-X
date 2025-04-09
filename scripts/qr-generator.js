@@ -1,4 +1,4 @@
-let qrData = "Fərid";
+let qrData = "Farid";
 
 const qrCode = new QRCodeStyling({
     data: qrData,
