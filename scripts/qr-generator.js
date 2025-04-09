@@ -1,7 +1,30 @@
-let qrData = "Farid";
+let qrData = "Cashback";
 
 const qrCode = new QRCodeStyling({
     data: qrData,
+    dotsOptions: {
+        color: "#98BBF5",
+        type: "rounded"
+    },
+    backgroundOptions: {
+        color: "#1C304F",
+    },
+    imageOptions: {
+        crossOrigin: "anonymous",
+        margin: 10
+    }
+});
+
+qrCode.append(document.getElementById("qrcode"));
+
+document.getElementById("qr-info").textContent = qrData;
+
+
+
+let qrData1 = qrData;
+
+const qrCode1 = new QRCodeStyling({
+    data: qrData1,
     dotsOptions: {
         color: "#1C304F",
         type: "rounded"
@@ -15,6 +38,6 @@ const qrCode = new QRCodeStyling({
     }
 });
 
-qrCode.append(document.getElementById("qrcode"));
+qrCode1.append(document.getElementById("qrcode1"));
 
-document.getElementById("qr-info").textContent = qrData;
+document.getElementById("qr-info1").textContent = qrData;

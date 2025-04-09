@@ -21,12 +21,21 @@
             </header>
             <h2>Profit</h2>
 
-            <div class="profit-frame profit-frame-3">
+            <label for="frame-3-trigger" class="profit-frame profit-frame-3">
                 <div class="profit-frame-3-box">
-                    <div id="qrcode"></div>
-                    <div class="qr-info" id="qr-info"></div>
+                    <div class="profit-frame-3-top-box">
+                        <div class="profit-frame-3-top-box-left">INFO</div>
+                        <div class="profit-frame-3-top-box-center">
+                            <div id="qrcode"></div>
+                            <div class="qr-info" id="qr-info"></div>
+                        </div>
+                        <div class="profit-frame-3-top-box-right">INFO</div>
+                    </div>
+                    <div class="profit-frame-3-bottom-box">
+                        <p class="profit-frame-3-bottom-box-info">Cashback qazanmaq üçün Kodu skan edin.</p>
+                    </div>
                 </div>
-            </div>
+            </label>
             <div class="profit-frame profit-frame-1">
                 <div class="balance">
                     <p class="aim">Bu aylıq qazancım</p>
@@ -77,6 +86,29 @@
                     <div class="profit-frame-2-item-text">Digər</div>
                 </div>
             </div>
+
+            <div class="profit-frame-3-extra-box">
+                <p class="profit-frame-3-extra-box-header">Cashback toplayın</p>
+                <div class="profit-frame-3-extra-box-line"></div>
+                <div class="profit-frame-3-extra-box-qr-box">
+                    <div id="qrcode1"></div>
+                    <div class="qr-info1" id="qr-info1"></div>
+                </div>
+                <div class="profit-frame-3-extra-box-info">
+                    <div class="profit-frame-3-extra-box-info-text">Cashback toplayın</div>
+                    <a href="#" class="profit-frame-3-extra-box-info-link">Skanlama ilə bağlı probleminiz var?</a>
+                    <div class="profit-frame-3-extra-box-info-box">
+                        <div class="profit-frame-3-extra-box-info-box-p">
+                            QR kodu skan edərək və ya kassirə deyərək ödəniş zamanı cashback qazana bilərsiz.
+                        </div>
+                        <div class="profit-frame-3-extra-box-info-box-logo"></div>
+                    </div>
+                </div>
+            </div>
+            <label for="frame-3-trigger" class="profit-frame-3-hidden-overlay"></label>
+            <div class="profit-frame-3-trigger-checkbox">
+                <input type="checkbox" name="frame-3-trigger" id="frame-3-trigger">
+            </div>
         </div>
     </div>
 
@@ -99,30 +131,7 @@
         </a>
     </nav>
 
-    <!-- <script src="scripts/qr-generator.js"></script> -->
-
-    <script>
-        let qrData = "qrTest";
-
-        const qrCode = new QRCodeStyling({
-            data: qrData,
-            dotsOptions: {
-                color: "#1C304F",
-                type: "rounded"
-            },
-            backgroundOptions: {
-                color: "#98BBF5",
-            },
-            imageOptions: {
-                crossOrigin: "anonymous",
-                margin: 10
-            }
-        });
-
-        qrCode.append(document.getElementById("qrcode"));
-
-        document.getElementById("qr-info").textContent = qrData;
-    </script>
+    <script src="scripts/qr-generator.js"></script>
 </body>
 
 </html>

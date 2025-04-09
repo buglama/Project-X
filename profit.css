@@ -1,37 +1,8 @@
-.profit-frame-3 {
-    margin: 12px 0;
-    color: var(--primary);
-    font-weight: 600;
-}
-
-.profit-frame-3 canvas {
-    width: 40%;
-    aspect-ratio: 1/1;
-}
-
-.profit-frame-3-box {
-    width: 90%;
-    background-color: var(--secondary);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.profit-frame-3-box #qrcode {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .profit {
     width: 100%;
     height: 100%;
     padding-bottom: 72px;
+    overflow: hidden;
     overflow-y: scroll;
 }
 
@@ -96,4 +67,167 @@
 .profit-frame-2-item-text {
     font-size: 14px;
     color: var(--primary-light-10);
+}
+
+.profit-frame-3 {
+    margin: 12px 0;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.profit-frame-3 canvas {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.profit-frame-3-box {
+    width: 90%;
+    background-color: var(--secondary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profit-frame-3-box #qrcode {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profit-frame-3-top-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profit-frame-3-top-box-center {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.profit-frame-3-top-box-left {
+    color: transparent;
+}
+
+.profit-frame-3-bottom-box-info {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.profit-frame-3-extra-box {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px 12px 0 0;
+    background-color: var(--primary);
+    color: var(--secondary);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 99;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.profit-frame-3-hidden-overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #00000080;
+    z-index: 98;
+    display: none;
+    overflow: hidden;
+}
+
+.profit:has(#frame-3-trigger:checked) .profit-frame-3-extra-box {
+    display: flex;
+}
+
+.profit:has(#frame-3-trigger:checked) .profit-frame-3-hidden-overlay {
+    display: block;
+}
+
+#frame-3-trigger {
+    display: none;
+}
+
+.profit-frame-3-extra-box-qr-box {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 12px;
+}
+
+#qrcode1 {
+    width: 100%;
+}
+
+#qrcode1 canvas {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.profit-frame-3-extra-box-header {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.profit-frame-3-extra-box-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--secondary);
+}
+
+.profit-frame-3-extra-box-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profit-frame-3-extra-box-info-link {
+    color: #fff;
+}
+
+.profit-frame-3-extra-box-info-box {
+    width: 90%;
+    display: flex;
+    gap: 8px;
+    align-self: center;
+    align-items: center;
+    border: 1px solid var(--secondary);
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 12px;
+}
+
+.profit-frame-3-extra-box-info-box-logo {
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--secondary);
+    border-radius: 12px;
 }
