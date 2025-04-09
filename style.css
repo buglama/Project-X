@@ -1054,3 +1054,33 @@ p.frame-4-item-name {
     align-items: center;
     justify-content: center;
 }
+
+.profit-frame-3 {
+    margin: 12px 0;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.profit-frame-3 canvas {
+    width: 40%;
+    aspect-ratio: 1/1;
+}
+
+.profit-frame-3-box {
+    width: 90%;
+    background-color: var(--secondary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profit-frame-3-box #qrcode {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

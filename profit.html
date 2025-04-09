@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <script src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -19,6 +20,12 @@
             </header>
             <h2>Profit</h2>
 
+            <div class="profit-frame profit-frame-3">
+                <div class="profit-frame-3-box">
+                    <div id="qrcode"></div>
+                    <div class="qr-info" id="qr-info"></div>
+                </div>
+            </div>
             <div class="profit-frame profit-frame-1">
                 <div class="balance">
                     <p class="aim">Bu aylıq qazancım</p>
@@ -36,7 +43,7 @@
                             <p class="profit-info-sml-left">Məqsədim</p>
                             <div class="profit-info-sml-right">50₼</div>
                         </div>
-                        <div class="profit-info-sml">   
+                        <div class="profit-info-sml">
                             <p class="profit-info-sml-left">Qazancım</p>
                             <div class="profit-info-sml-right">43.27₼</div>
                         </div>
@@ -90,6 +97,8 @@
             PROFILE
         </a>
     </nav>
+
+    <script src="scripts/qr-generator.js"></script>
 </body>
 
 </html>
