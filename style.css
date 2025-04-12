@@ -683,6 +683,7 @@ header p {
     margin-top: -70px;
     font-size: 32px;
     font-weight: 600;
+    overflow: hidden;
 }
 
 .aim {
@@ -952,6 +953,10 @@ p.frame-4-item-name {
     margin-top: unset;
 }
 
+.frame-header-home-7 {
+    margin-bottom: 12px;
+}
+
 .frame-7-item {
     width: 32%;
     display: flex;
@@ -962,7 +967,7 @@ p.frame-4-item-name {
     padding: 4px;
     border-radius: 12px;
     gap: 4px;
-    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .frame-7-item-img {
@@ -970,7 +975,6 @@ p.frame-4-item-name {
     aspect-ratio: 1/1;
     background-color: var(--primary);
     border-radius: 8px;
-    padding: 8px;
 }
 
 .frame-7-item-image-span {
@@ -984,7 +988,3 @@ p.frame-4-item-name {
     align-items: center;
     justify-content: center;
 }
-
-/*
-Farid
-*/

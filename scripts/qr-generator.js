@@ -1,4 +1,4 @@
-let qrData = "Cashback";
+let qrData = "M 1828 592";
 
 const qrCode = new QRCodeStyling({
     data: qrData,
