@@ -429,16 +429,16 @@ header p {
 }
 
 .nearby-places-text-main {
-    width: 120px;
     height: 20px;
-    background-color: var(--primary);
+    font-size: 20px;
+    color: var(--primary);
     border-radius: 8px;
 }
 
 .nearby-places-text-2nd {
-    width: 80px;
     height: 16px;
-    background-color: var(--primary);
+    font-size: 14px;
+    color: var(--primary);
     border-radius: 8px;
 }
 
@@ -545,8 +545,12 @@ header p {
 .nav-icon {
     height: 32px;
     aspect-ratio: 1/1;
-    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
     border-radius: 4px;
+    font-size: 26px;
 }
 
 .nav-item {
